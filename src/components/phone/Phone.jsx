@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Phone = ({ phone }) => {
 
-    const { id, phone_name, image, rating, brand_name, price } = phone;
+    const { id, phone_name, image, brand_name, price } = phone;
 
     return (
         <div className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
