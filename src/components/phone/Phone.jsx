@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
 
+import Rating from "react-rating";
 import { Link } from "react-router-dom";
 
 const Phone = ({ phone }) => {
 
-    const { id, phone_name, image, brand_name, price } = phone;
+    const { id, phone_name, rating, image, brand_name, price } = phone;
 
     return (
         <div className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
@@ -22,7 +23,14 @@ const Phone = ({ phone }) => {
                     <p className="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
                         ${price}
                     </p>
+
                 </div>
+                <p className="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
+                    <Rating
+                        initialRating={rating}
+                        readonly
+                    />
+                </p>
                 <p className="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
                     {brand_name}
                 </p>
